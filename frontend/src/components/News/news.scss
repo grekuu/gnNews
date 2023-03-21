@@ -1,4 +1,6 @@
 .news-container {
   width: 75%;
-  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -16,7 +16,7 @@ interface NewsSource {
   name: string;
 }
 
-interface News {
+export interface News {
   title: string;
   source: NewsSource;
   publishedAt: string;
