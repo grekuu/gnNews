@@ -2,18 +2,52 @@ import "./article.scss";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { News } from "../../redux/newsSlice";
+import { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
-const Article = ({ title, source, publishedAt }: News) => {
+const Article = ({
+  title,
+  source,
+  publishedAt,
+  urlToImage,
+  content,
+  author,
+  url,
+}: News) => {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <Card className="article">
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>Source: {source.name}</Card.Text>
-        <Card.Text>Published at: {publishedAt}</Card.Text>
-        <Button variant="primary">More</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <Card className="article">
+        {urlToImage ? <Card.Img variant="top" src={urlToImage} /> : <></>}
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>Source: {source.name}</Card.Text>
+          <Card.Text className="button-padding">
+            Published at: {publishedAt}
+          </Card.Text>
+          <Button
+            variant="primary"
+            className="see-more-btn"
+            onClick={() => setShowModal(true)}
+          >
+            More
+          </Button>
+        </Card.Body>
+      </Card>
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        dialogClassName="modal-90w"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <p>{content ? content : "No content to display"}</p>
+          <p>Author: {author}</p>
+          <a href={url}>Link to page</a>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 };
 

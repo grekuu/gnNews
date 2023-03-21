@@ -22,6 +22,8 @@ export interface News {
   publishedAt: string;
   urlToImage: string;
   url: string;
+  content: string;
+  author: string;
 }
 
 interface NewsState {

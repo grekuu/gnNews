@@ -1,4 +1,17 @@
 .article {
-  width: 50%;
+  width: 20rem;
   margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .see-more-btn {
+    margin-bottom: auto;
+    position: absolute;
+    bottom: 0px;
+    margin: 5px 0px;
+  }
+  .button-padding {
+    padding-bottom: 15px;
+  }
 }
