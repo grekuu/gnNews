@@ -3,14 +3,15 @@ import Container from "react-bootstrap/esm/Container";
 import News from "../News/News";
 import SideMenu from "../SideMenu/SideMenu";
 import { useEffect } from "react";
-import { useAppDispatch } from "../../redux/hooks";
-import { fetchAsyncNews } from "../../redux/newsSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { fetchAsyncNews, getCountry } from "../../redux/newsSlice";
 
 const Home = () => {
   const dispatch = useAppDispatch();
+  const country = useAppSelector(getCountry);
 
   useEffect(() => {
-    dispatch(fetchAsyncNews());
+    dispatch(fetchAsyncNews("pl"));
   }, [dispatch]);
 
   return (

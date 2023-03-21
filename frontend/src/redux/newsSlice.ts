@@ -5,8 +5,8 @@ import newsApi from "../common/newsApi";
 
 export const fetchAsyncNews = createAsyncThunk(
   "news/fetchAsyncNews",
-  async () => {
-    const response = await newsApi.get("");
+  async (country: string) => {
+    const response = await newsApi.get(`?country=${country}`);
     console.log(response.data);
     return response.data.articles;
   }
@@ -28,16 +28,22 @@ export interface News {
 
 interface NewsState {
   news: News[];
+  country: string;
 }
 
 const initialState: NewsState = {
   news: [],
+  country: "",
 };
 
 export const newsSlice = createSlice({
   name: "news",
   initialState,
-  reducers: {},
+  reducers: {
+    setCountry: (state, action: PayloadAction<string>) => {
+      state.country = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchAsyncNews.pending, () => {});
     builder.addCase(fetchAsyncNews.fulfilled, (state, { payload }) => {
@@ -47,8 +53,9 @@ export const newsSlice = createSlice({
   },
 });
 
-// export const { showPopUp } = appSlice.actions
+export const { setCountry } = newsSlice.actions;
 
 export const getAllNews = (state: RootState) => state.news.news;
+export const getCountry = (state: RootState) => state.news.country;
 
 export default newsSlice.reducer;
