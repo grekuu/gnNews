@@ -11,8 +11,8 @@ const Home = () => {
   const country = useAppSelector(getCountry);
 
   useEffect(() => {
-    dispatch(fetchAsyncNews("pl"));
-  }, [dispatch]);
+    dispatch(fetchAsyncNews(country));
+  }, [dispatch, country]);
 
   return (
     <Container className="home-container">

@@ -11,6 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/country/:country" element={<Home />}></Route>
         </Routes>
         <Footer />
       </Router>
