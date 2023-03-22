@@ -6,11 +6,17 @@ import "./header.scss";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { changeView, getListView } from "../../redux/newsSlice";
 
 const Header = () => {
   const [showPopUp, setShowPopUp] = useState(false);
 
   const popUpClicked = () => setShowPopUp(!showPopUp);
+
+  const dispatch = useAppDispatch();
+
+  const listView = useAppSelector(getListView);
 
   return (
     <Navbar bg="primary" variant="dark">
@@ -22,7 +28,11 @@ const Header = () => {
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <Button className="header-button" variant="light">
-              <BsList />
+              {listView ? (
+                <BsGridFill onClick={() => dispatch(changeView(!listView))} />
+              ) : (
+                <BsList onClick={() => dispatch(changeView(!listView))} />
+              )}
             </Button>
             <Button
               className="header-button"

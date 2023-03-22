@@ -29,11 +29,13 @@ export interface News {
 interface NewsState {
   news: News[];
   country: string;
+  listView: boolean;
 }
 
 const initialState: NewsState = {
   news: [],
   country: "",
+  listView: false,
 };
 
 export const newsSlice = createSlice({
@@ -42,6 +44,9 @@ export const newsSlice = createSlice({
   reducers: {
     setCountry: (state, action: PayloadAction<string>) => {
       state.country = action.payload;
+    },
+    changeView: (state, action: PayloadAction<boolean>) => {
+      state.listView = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -53,9 +58,10 @@ export const newsSlice = createSlice({
   },
 });
 
-export const { setCountry } = newsSlice.actions;
+export const { setCountry, changeView } = newsSlice.actions;
 
 export const getAllNews = (state: RootState) => state.news.news;
 export const getCountry = (state: RootState) => state.news.country;
+export const getListView = (state: RootState) => state.news.listView;
 
 export default newsSlice.reducer;
