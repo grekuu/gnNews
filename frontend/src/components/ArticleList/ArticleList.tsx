@@ -8,9 +8,9 @@ import "./articleList.scss";
 const ArticleList = () => {
   const news = useAppSelector(getAllNews) as News[];
   const [showModal, setShowModal] = useState(false);
-  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState<News | null>(null);
 
-  const handleArticleClick = (article: any) => {
+  const handleArticleClick = (article: News) => {
     setSelectedArticle(article);
     setShowModal(true);
   };
