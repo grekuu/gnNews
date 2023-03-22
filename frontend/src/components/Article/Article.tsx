@@ -18,7 +18,11 @@ const Article = ({
   return (
     <>
       <Card className="article">
-        {urlToImage ? <Card.Img variant="top" src={urlToImage} /> : <></>}
+        {urlToImage ? (
+          <Card.Img variant="top" src={urlToImage} className="card-img" />
+        ) : (
+          <></>
+        )}
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>Source: {source.name}</Card.Text>
