@@ -11,7 +11,7 @@ const Home = () => {
   const country = useAppSelector(getCountry);
 
   useEffect(() => {
-    dispatch(fetchAsyncNews(country));
+    dispatch(fetchAsyncNews(country ? country : "pl"));
   }, [dispatch, country]);
 
   return (

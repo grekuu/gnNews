@@ -14,33 +14,33 @@ const SideMenu = () => {
     <div className="side-menu">
       <ListGroup>
         <ListGroup.Item active>COUNTRIES</ListGroup.Item>
-        {/* <Link to="/country/pl"> */}
-        <ListGroup.Item
-          action
-          className="country-li"
-          onClick={() => dispatch(setCountry("pl"))}
-        >
-          <img src={Poland} alt="Poland" /> Poland
-        </ListGroup.Item>
-        {/* </Link> */}
-        {/* <Link to="/country/gb"> */}
-        <ListGroup.Item
-          action
-          className="country-li"
-          onClick={() => dispatch(setCountry("gb"))}
-        >
-          <img src={UK} alt="UK" /> United Kingdom
-        </ListGroup.Item>
-        {/* </Link> */}
-        {/* <Link to="/country/us"> */}
-        <ListGroup.Item
-          action
-          className="country-li"
-          onClick={() => dispatch(setCountry("us"))}
-        >
-          <img src={US} alt="US" /> United States
-        </ListGroup.Item>
-        {/* </Link> */}
+        <Link to="/country/pl">
+          <ListGroup.Item
+            action
+            className="country-li"
+            onClick={() => dispatch(setCountry("pl"))}
+          >
+            <img src={Poland} alt="Poland" /> Poland
+          </ListGroup.Item>
+        </Link>
+        <Link to="/country/gb">
+          <ListGroup.Item
+            action
+            className="country-li"
+            onClick={() => dispatch(setCountry("gb"))}
+          >
+            <img src={UK} alt="UK" /> United Kingdom
+          </ListGroup.Item>
+        </Link>
+        <Link to="/country/us">
+          <ListGroup.Item
+            action
+            className="country-li"
+            onClick={() => dispatch(setCountry("us"))}
+          >
+            <img src={US} alt="US" /> United States
+          </ListGroup.Item>
+        </Link>
       </ListGroup>
     </div>
   );
