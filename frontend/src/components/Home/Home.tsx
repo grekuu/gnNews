@@ -5,6 +5,7 @@ import SideMenu from "../SideMenu/SideMenu";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { fetchAsyncNews, getCountry } from "../../redux/newsSlice";
+import ArticleList from "../ArticleList/ArticleList";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -17,7 +18,8 @@ const Home = () => {
   return (
     <Container className="home-container">
       <SideMenu></SideMenu>
-      <News></News>
+      {/* <News></News> */}
+      <ArticleList></ArticleList>
     </Container>
   );
 };
