@@ -3,6 +3,12 @@
   a {
     text-decoration: none;
   }
+  .header-right {
+    display: flex;
+    .language-dropdown-item {
+      color: black;
+    }
+  }
   .header-button {
     margin: 0px 5px !important;
   }
