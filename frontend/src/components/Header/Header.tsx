@@ -60,13 +60,13 @@ const Header = () => {
                   className="language-dropdown-item"
                   onClick={() => handleClick("en")}
                 >
-                  English
+                  {t("English.1")}
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="language-dropdown-item"
                   onClick={() => handleClick("pl")}
                 >
-                  Polish
+                  {t("Polish.1")}
                 </Dropdown.Item>
               </DropdownButton>
             </div>
@@ -80,7 +80,7 @@ const Header = () => {
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="primary" onClick={popUpClicked}>
-                  Close
+                  {t("Close.1")}
                 </Button>
               </Modal.Footer>
             </Modal>

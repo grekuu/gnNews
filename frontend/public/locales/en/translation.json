@@ -40,5 +40,14 @@
     },
     "Link_to_page": {
         "1": "Link to page"
+    },
+    "English": {
+        "1": "English"
+    },
+    "Polish": {
+        "1": "Polish"
+    },
+    "Close": {
+        "1": "Close"
     }
 }
