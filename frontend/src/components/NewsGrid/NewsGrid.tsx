@@ -1,18 +1,18 @@
 import { useAppSelector } from "../../redux/hooks";
 import { getAllNews } from "../../redux/newsSlice";
-import Article from "../Article/Article";
-import "./news.scss";
+import GridItem from "../GridItem/GridItem";
+import "./newsGrid.scss";
 
-const News = () => {
+const NewsGrid = () => {
   const news = useAppSelector(getAllNews);
 
   return (
     <div className="news-container">
       {news.map((article, id) => {
-        return <Article key={id} {...article}></Article>;
+        return <GridItem key={id} {...article}></GridItem>;
       })}
     </div>
   );
 };
 
-export default News;
+export default NewsGrid;

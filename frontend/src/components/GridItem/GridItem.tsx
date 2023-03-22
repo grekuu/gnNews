@@ -1,11 +1,12 @@
-import "./article.scss";
+import "./gridItem.scss";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { News } from "../../redux/newsSlice";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import { Placeholder } from "react-bootstrap";
 
-const Article = ({
+const GridItem = ({
   title,
   source,
   publishedAt,
@@ -21,7 +22,7 @@ const Article = ({
         {urlToImage ? (
           <Card.Img variant="top" src={urlToImage} className="card-img" />
         ) : (
-          <></>
+          <Placeholder className="card-img" />
         )}
         <Card.Body>
           <Card.Title>{title}</Card.Title>
@@ -55,4 +56,4 @@ const Article = ({
   );
 };
 
-export default Article;
+export default GridItem;

@@ -1,6 +1,6 @@
 import "./home.scss";
 import Container from "react-bootstrap/esm/Container";
-import News from "../News/News";
+import NewsGrid from "../NewsGrid/NewsGrid";
 import SideMenu from "../SideMenu/SideMenu";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Container className="home-container">
       <SideMenu></SideMenu>
-      {listView ? <ArticleList></ArticleList> : <News></News>}
+      {listView ? <ArticleList></ArticleList> : <NewsGrid></NewsGrid>}
     </Container>
   );
 };
