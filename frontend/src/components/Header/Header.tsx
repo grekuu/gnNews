@@ -53,7 +53,7 @@ const Header = () => {
               </Button>
               <DropdownButton
                 id="dropdown-basic-button"
-                title="Language"
+                title={t("Language.1")}
                 variant="light"
               >
                 <Dropdown.Item

@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import { useAppSelector } from "../../redux/hooks";
 import { getAllNews, News } from "../../redux/newsSlice";
 import "./articleList.scss";
+import { useTranslation } from "react-i18next";
 
 const ArticleList = () => {
   const news = useAppSelector(getAllNews) as News[];
   const [showModal, setShowModal] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState<News | null>(null);
+  const { t, i18n } = useTranslation();
 
   const handleArticleClick = (article: News) => {
     setSelectedArticle(article);
@@ -18,19 +20,25 @@ const ArticleList = () => {
   return (
     <ListGroup as="ul" className="article-list-container">
       <ListGroup.Item as="li" active>
-        News
+        {t("News.1")}
       </ListGroup.Item>
       {news.map((article, id) => {
         return (
-          <ListGroup.Item
-            action
-            as="li"
-            key={id}
-            className="article-item"
-            onClick={() => handleArticleClick(article)}
-          >
-            {article.title}
-          </ListGroup.Item>
+          <div key={id}>
+            <ListGroup.Item
+              action
+              as="li"
+              className="article-item"
+              onClick={() => handleArticleClick(article)}
+            >
+              {article.title} <br />
+              {t("Author.1")}
+              {article.author} <br />
+              {t("Source.1")}
+              {article.source.name}
+              <br />
+            </ListGroup.Item>
+          </div>
         );
       })}
 
@@ -47,10 +55,12 @@ const ArticleList = () => {
               <p>
                 {selectedArticle.content
                   ? selectedArticle.content
-                  : "No content to display"}
+                  : `${t("No_content_to_display.1")}`}
               </p>
-              <p>Author: {selectedArticle.author}</p>
-              <a href={selectedArticle.url}>Link to page</a>
+              <p>
+                {t("Author.1")} {selectedArticle.author}
+              </p>
+              <a href={selectedArticle.url}>{t("Link_to_page.1")}</a>
             </>
           )}
         </Modal.Body>

@@ -5,6 +5,7 @@ import { News } from "../../redux/newsSlice";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Placeholder } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const GridItem = ({
   title,
@@ -16,6 +17,7 @@ const GridItem = ({
   url,
 }: News) => {
   const [showModal, setShowModal] = useState(false);
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Card className="article">
@@ -26,16 +28,18 @@ const GridItem = ({
         )}
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>Source: {source.name}</Card.Text>
+          <Card.Text>
+            {t("Source.1")} {source.name}
+          </Card.Text>
           <Card.Text className="button-padding">
-            Published at: {publishedAt}
+            {t("Published_at.1")} {publishedAt}
           </Card.Text>
           <Button
             variant="primary"
             className="see-more-btn"
             onClick={() => setShowModal(true)}
           >
-            More
+            {t("More.1")}
           </Button>
         </Card.Body>
       </Card>
@@ -47,9 +51,11 @@ const GridItem = ({
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <p>{content ? content : "No content to display"}</p>
-          <p>Author: {author}</p>
-          <a href={url}>Link to page</a>
+          <p>{content ? content : `${t("No_content_to_display.1")}`}</p>
+          <p>
+            {t("Author.1")} {author}
+          </p>
+          <a href={url}>{t("Link_to_page.1")}</a>
         </Modal.Body>
       </Modal>
     </>

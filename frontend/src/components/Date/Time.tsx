@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 export const DateTime = () => {
+  var [date, setDate] = useState(new Date());
 
-    var [date, setDate] = useState(new Date());
+  useEffect(() => {
+    var timer = setInterval(() => setDate(new Date()), 1000);
+    return function cleanup() {
+      clearInterval(timer);
+    };
+  });
 
-    useEffect(() => {
-        var timer = setInterval(() => setDate(new Date()), 1000)
-        return function cleanup() {
-            clearInterval(timer)
-        }
+  return (
+    <div>
+      <p>{date.toLocaleTimeString()}</p>
+    </div>
+  );
+};
 
-    });
-
-    return (
-        <div>
-            <p> Time : {date.toLocaleTimeString()}</p>
-        </div>
-    )
-}
-
-export default DateTime
+export default DateTime;

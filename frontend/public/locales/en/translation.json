@@ -1,5 +1,44 @@
 {
     "News": {
         "1": "News"
+    },
+    "Language": {
+        "1": "Language"
+    },
+    "COUNTRIES": {
+        "1": "COUNTRIES"
+    },
+    "Poland": {
+        "1": "Poland"
+    },
+    "United_Kingdom": {
+        "1": "United Kingdom"
+    },
+    "United_States": {
+        "1": "United States"
+    },
+    "More": {
+        "1": "More"
+    },
+    "Source": {
+        "1": "Source: "
+    },
+    "Published_at": {
+        "1": "Published at: "
+    },
+    "Time": {
+        "1": "Time: "
+    },
+    "Visible_number_of_articles": {
+        "1": "Visible number of articles: "
+    },
+    "Author": {
+        "1": "Author: "
+    },
+    "No_content_to_display": {
+        "1": "No content to display"
+    },
+    "Link_to_page": {
+        "1": "Link to page"
     }
 }
