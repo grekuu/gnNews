@@ -5,3 +5,9 @@
   box-sizing: border-box;
   justify-items: center;
 }
+
+@media only screen and (max-width: 992px) {
+  .news-container {
+    grid-template-columns: auto;
+  }
+}
