@@ -39,9 +39,15 @@ const Header = () => {
             <div className="header-right">
               <Button className="header-button" variant="light">
                 {listView ? (
-                  <BsGridFill onClick={() => dispatch(changeView(!listView))} />
+                  <BsGridFill
+                    data-testid="grid-icon"
+                    onClick={() => dispatch(changeView(!listView))}
+                  />
                 ) : (
-                  <BsList onClick={() => dispatch(changeView(!listView))} />
+                  <BsList
+                    data-testid="list-icon"
+                    onClick={() => dispatch(changeView(!listView))}
+                  />
                 )}
               </Button>
               <Button
