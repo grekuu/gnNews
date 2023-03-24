@@ -82,7 +82,7 @@ const Header = () => {
                 <Modal.Title>PopUp</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                Największa trudność: Fork jako prywatne repo <br />
+                Największa trudność: Setup testów <br />
                 Największa frajda: Wykorzystanie Bootstrapa do całości aplikacji
               </Modal.Body>
               <Modal.Footer>
