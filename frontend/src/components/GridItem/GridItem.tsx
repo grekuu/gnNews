@@ -17,7 +17,7 @@ const GridItem = ({
   url,
 }: News) => {
   const [showModal, setShowModal] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Card className="article">

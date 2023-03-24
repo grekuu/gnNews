@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const news = useAppSelector(getAllNews);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Nav className="footer" activeKey="/home">

@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const SideMenu = () => {
   const dispatch = useAppDispatch();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="side-menu">

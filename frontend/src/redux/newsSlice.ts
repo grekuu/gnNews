@@ -7,7 +7,6 @@ export const fetchAsyncNews = createAsyncThunk(
   "news/fetchAsyncNews",
   async (country: string) => {
     const response = await newsApi.get(`?country=${country}`);
-    console.log(response.data);
     return response.data.articles;
   }
 );

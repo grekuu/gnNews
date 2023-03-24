@@ -1,6 +1,6 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Modal from "react-bootstrap/Modal";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "../../redux/hooks";
 import { getAllNews, News } from "../../redux/newsSlice";
 import "./articleList.scss";
@@ -10,7 +10,7 @@ const ArticleList = () => {
   const news = useAppSelector(getAllNews) as News[];
   const [showModal, setShowModal] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState<News | null>(null);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const handleArticleClick = (article: News) => {
     setSelectedArticle(article);
@@ -31,7 +31,7 @@ const ArticleList = () => {
               className="article-item"
               onClick={() => handleArticleClick(article)}
             >
-              {article.title} <br />
+              <b>{article.title}</b> <br />
               {t("Author.1")}
               {article.author} <br />
               {t("Source.1")}

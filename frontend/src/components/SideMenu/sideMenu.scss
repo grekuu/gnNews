@@ -21,3 +21,9 @@
     width: 50%;
   }
 }
+
+@media only screen and (max-width: 360px) {
+  .side-menu {
+    width: 75%;
+  }
+}
