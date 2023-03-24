@@ -1,6 +1,6 @@
 .article {
   width: 20rem;
-  margin: 10px 0px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -17,5 +17,11 @@
   .card-img {
     height: 178px;
     object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .article {
+    width: 90%;
   }
 }

@@ -60,7 +60,9 @@ const ArticleList = () => {
               <p>
                 {t("Author.1")} {selectedArticle.author}
               </p>
-              <a href={selectedArticle.url}>{t("Link_to_page.1")}</a>
+              <a href={selectedArticle.url} target="_blank">
+                {t("Link_to_page.1")}
+              </a>
             </>
           )}
         </Modal.Body>

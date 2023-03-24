@@ -1,5 +1,7 @@
 .side-menu {
   width: 25%;
+  margin-bottom: 20px;
+  margin-right: 5px;
   a {
     text-decoration: none;
   }
@@ -11,5 +13,11 @@
     img {
       max-width: 20px;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .side-menu {
+    width: 50%;
   }
 }

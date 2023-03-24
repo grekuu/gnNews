@@ -55,7 +55,9 @@ const GridItem = ({
           <p>
             {t("Author.1")} {author}
           </p>
-          <a href={url}>{t("Link_to_page.1")}</a>
+          <a href={url} target="_blank">
+            {t("Link_to_page.1")}
+          </a>
         </Modal.Body>
       </Modal>
     </>

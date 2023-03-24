@@ -59,6 +59,7 @@ const Header = () => {
               </Button>
               <DropdownButton
                 id="dropdown-basic-button"
+                align="end"
                 title={t("Language.1")}
                 variant="light"
               >
