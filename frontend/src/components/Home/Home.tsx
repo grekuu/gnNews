@@ -18,8 +18,8 @@ const Home = () => {
 
   return (
     <Container className="home-container">
-      <SideMenu></SideMenu>
-      {listView ? <ArticleList></ArticleList> : <NewsGrid></NewsGrid>}
+      <SideMenu />
+      {listView ? <ArticleList /> : <NewsGrid />}
     </Container>
   );
 };
