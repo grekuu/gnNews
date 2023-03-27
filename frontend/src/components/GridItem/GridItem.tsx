@@ -27,11 +27,11 @@ const GridItem = ({
           <Placeholder className="card-img" />
         )}
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>
+          <Card.Title className="grid-cart-title">{title}</Card.Title>
+          <Card.Text className="grid-cart-text">
             {t("Source.1")} {source.name}
           </Card.Text>
-          <Card.Text className="button-padding">
+          <Card.Text className="button-padding grid-cart-text">
             {t("Published_at.1")} {publishedAt}
           </Card.Text>
           <Button

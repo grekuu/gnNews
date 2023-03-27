@@ -5,15 +5,23 @@
   flex-direction: column;
   position: relative;
 
+  .grid-cart-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
   .see-more-btn {
     margin-bottom: auto;
     position: absolute;
     bottom: 0px;
     margin: 5px 0px;
   }
+
   .button-padding {
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
   }
+
   .card-img {
     height: 178px;
     object-fit: cover;
