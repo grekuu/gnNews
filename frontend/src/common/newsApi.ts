@@ -5,5 +5,6 @@ export default axios.create({
   baseURL: `https://newsapi.org/v2/top-headlines`,
   headers: {
     Authorization: APIKey,
+    'Access-Control-Request-Headers': 'access-control-allow-methods',
   },
 });
