@@ -1,1 +1,1 @@
-export const APIKey = import.meta.env.VITE_REACT_APP_API_KEY;
+export const APIKey = import.meta.env.VITE_VERCEL_APP_API_KEY;
