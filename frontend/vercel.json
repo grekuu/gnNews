@@ -1,0 +1,8 @@
+{
+    "routes": [
+      { "src": "/", "dest": "/" },
+      { "src": "/country/pl", "dest": "/" },
+      { "src": "/country/us", "dest": "/" },
+      { "src": "/country/gb", "dest": "/" }
+    ]
+  }
