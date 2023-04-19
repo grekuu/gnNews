@@ -1,8 +1,5 @@
 {
-    "routes": [
-      { "src": "/", "dest": "/" },
-      { "src": "/country/pl", "dest": "/" },
-      { "src": "/country/en", "dest": "/" },
-      { "src": "/country/gb", "dest": "/" }
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
   }
