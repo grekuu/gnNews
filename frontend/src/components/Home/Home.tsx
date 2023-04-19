@@ -13,7 +13,7 @@ const Home = () => {
   const listView = useAppSelector(getListView);
 
   useEffect(() => {
-    dispatch(fetchAsyncNews(country ? country : 'pl'));
+    dispatch(fetchAsyncNews(country ? country : 'us'));
   }, [dispatch, country]);
 
   return (

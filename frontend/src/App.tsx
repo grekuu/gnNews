@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="/country/pl" />} />
+          <Route path="/" element={<Navigate to="/country/us" />} />
           <Route path="/country/:country" element={<Home />}></Route>
         </Routes>
         <Footer />
