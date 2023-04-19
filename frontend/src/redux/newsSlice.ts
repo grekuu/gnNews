@@ -1,15 +1,12 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "./store";
-import newsApi from "../common/newsApi";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { RootState } from './store';
+import newsApi from '../common/newsApi';
 
-export const fetchAsyncNews = createAsyncThunk(
-  "news/fetchAsyncNews",
-  async (country: string) => {
-    const response = await newsApi.get(`?country=${country}`);
-    return response.data.articles;
-  }
-);
+export const fetchAsyncNews = createAsyncThunk('news/fetchAsyncNews', async (country: string) => {
+  const response = await newsApi.get(`?country=${country}`);
+  return response.data.articles;
+});
 
 interface NewsSource {
   name: string;
@@ -33,12 +30,12 @@ interface NewsState {
 
 const initialState: NewsState = {
   news: [],
-  country: "",
+  country: '',
   listView: false,
 };
 
 export const newsSlice = createSlice({
-  name: "news",
+  name: 'news',
   initialState,
   reducers: {
     setCountry: (state, action: PayloadAction<string>) => {

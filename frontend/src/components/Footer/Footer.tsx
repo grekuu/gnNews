@@ -1,9 +1,9 @@
-import "./footer.scss";
-import Nav from "react-bootstrap/Nav";
-import Time from "../Date/Time";
-import { useAppSelector } from "../../redux/hooks";
-import { getAllNews } from "../../redux/newsSlice";
-import { useTranslation } from "react-i18next";
+import './footer.scss';
+import Nav from 'react-bootstrap/Nav';
+import Time from '../Date/Time';
+import { useAppSelector } from '../../redux/hooks';
+import { getAllNews } from '../../redux/newsSlice';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const news = useAppSelector(getAllNews);
@@ -15,7 +15,7 @@ const Footer = () => {
         <Time></Time>
       </Nav.Item>
       <Nav.Item className="footer-item">
-        {t("Visible_number_of_articles.1")} {news.length}
+        {t('Visible_number_of_articles.1')} {news.length}
       </Nav.Item>
     </Nav>
   );

@@ -1,13 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  Navigate,
-  Route,
-  Routes,
-} from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

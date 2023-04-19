@@ -1,21 +1,13 @@
-import "./gridItem.scss";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import { News } from "../../redux/newsSlice";
-import { useState } from "react";
-import Modal from "react-bootstrap/Modal";
-import { Placeholder } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
+import './gridItem.scss';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { News } from '../../redux/newsSlice';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import { Placeholder } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
-const GridItem = ({
-  title,
-  source,
-  publishedAt,
-  urlToImage,
-  content,
-  author,
-  url,
-}: News) => {
+const GridItem = ({ title, source, publishedAt, urlToImage, content, author, url }: News) => {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation();
   return (
@@ -29,17 +21,13 @@ const GridItem = ({
         <Card.Body>
           <Card.Title className="grid-cart-title">{title}</Card.Title>
           <Card.Text className="grid-cart-text">
-            {t("Source.1")} {source.name}
+            {t('Source.1')} {source.name}
           </Card.Text>
           <Card.Text className="button-padding grid-cart-text">
-            {t("Published_at.1")} {publishedAt}
+            {t('Published_at.1')} {publishedAt}
           </Card.Text>
-          <Button
-            variant="primary"
-            className="see-more-btn"
-            onClick={() => setShowModal(true)}
-          >
-            {t("More.1")}
+          <Button variant="primary" className="see-more-btn" onClick={() => setShowModal(true)}>
+            {t('More.1')}
           </Button>
         </Card.Body>
       </Card>
@@ -51,12 +39,12 @@ const GridItem = ({
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <p>{content ? content : `${t("No_content_to_display.1")}`}</p>
+          <p>{content ? content : `${t('No_content_to_display.1')}`}</p>
           <p>
-            {t("Author.1")} {author}
+            {t('Author.1')} {author}
           </p>
           <a href={url} target="_blank">
-            {t("Link_to_page.1")}
+            {t('Link_to_page.1')}
           </a>
         </Modal.Body>
       </Modal>

@@ -1,16 +1,16 @@
-import { Navbar } from "react-bootstrap";
-import Button from "react-bootstrap/esm/Button";
-import Container from "react-bootstrap/esm/Container";
-import { BsList, BsGridFill } from "react-icons/bs";
-import "./header.scss";
-import { useState } from "react";
-import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { changeView, getListView } from "../../redux/newsSlice";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import { useTranslation } from "react-i18next";
+import { Navbar } from 'react-bootstrap';
+import Button from 'react-bootstrap/esm/Button';
+import Container from 'react-bootstrap/esm/Container';
+import { BsList, BsGridFill } from 'react-icons/bs';
+import './header.scss';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { changeView, getListView } from '../../redux/newsSlice';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [showPopUp, setShowPopUp] = useState(false);
@@ -31,7 +31,7 @@ const Header = () => {
     <Navbar bg="primary" variant="dark">
       <Container>
         <Link to="/">
-          <Navbar.Brand>{t("News.1")}</Navbar.Brand>
+          <Navbar.Brand>{t('News.1')}</Navbar.Brand>
         </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
@@ -39,41 +39,20 @@ const Header = () => {
             <div className="header-right">
               <Button className="header-button" variant="light">
                 {listView ? (
-                  <BsGridFill
-                    data-testid="grid-icon"
-                    onClick={() => dispatch(changeView(!listView))}
-                  />
+                  <BsGridFill data-testid="grid-icon" onClick={() => dispatch(changeView(!listView))} />
                 ) : (
-                  <BsList
-                    data-testid="list-icon"
-                    onClick={() => dispatch(changeView(!listView))}
-                  />
+                  <BsList data-testid="list-icon" onClick={() => dispatch(changeView(!listView))} />
                 )}
               </Button>
-              <Button
-                className="header-button"
-                variant="light"
-                onClick={popUpClicked}
-              >
+              <Button className="header-button" variant="light" onClick={popUpClicked}>
                 PopUp
               </Button>
-              <DropdownButton
-                id="dropdown-basic-button"
-                align="end"
-                title={t("Language.1")}
-                variant="light"
-              >
-                <Dropdown.Item
-                  className="language-dropdown-item"
-                  onClick={() => handleClick("en")}
-                >
-                  {t("English.1")}
+              <DropdownButton id="dropdown-basic-button" align="end" title={t('Language.1')} variant="light">
+                <Dropdown.Item className="language-dropdown-item" onClick={() => handleClick('en')}>
+                  {t('English.1')}
                 </Dropdown.Item>
-                <Dropdown.Item
-                  className="language-dropdown-item"
-                  onClick={() => handleClick("pl")}
-                >
-                  {t("Polish.1")}
+                <Dropdown.Item className="language-dropdown-item" onClick={() => handleClick('pl')}>
+                  {t('Polish.1')}
                 </Dropdown.Item>
               </DropdownButton>
             </div>
@@ -87,7 +66,7 @@ const Header = () => {
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="primary" onClick={popUpClicked}>
-                  {t("Close.1")}
+                  {t('Close.1')}
                 </Button>
               </Modal.Footer>
             </Modal>

@@ -1,53 +1,53 @@
 {
-    "News": {
-        "1": "Nowości"
-    },
-    "Language": {
-        "1": "Język"
-    },
-    "COUNTRIES": {
-        "1": "KRAJE"
-    },
-    "Poland": {
-        "1": "Polska"
-    },
-    "United_Kingdom": {
-        "1": "Wielka Brytania"
-    },
-    "United_States": {
-        "1": "Stany Zjednoczone"
-    },
-    "More": {
-        "1": "Więcej"
-    },
-    "Source": {
-        "1": "Źródło: "
-    },
-    "Published_at": {
-        "1": "Opublikowano: "
-    },
-    "Time": {
-        "1": "Czas: "
-    },
-    "Visible_number_of_articles": {
-        "1": "Widoczna liczba artykułów: "
-    },
-    "Author": {
-        "1": "Autor: "
-    },
-    "No_content_to_display": {
-        "1": "Brak treści do wyświetlenia"
-    },
-    "Link_to_page": {
-        "1": "Link do strony"
-    },
-    "English": {
-        "1": "Angielski"
-    },
-    "Polish": {
-        "1": "Polski"
-    },
-    "Close": {
-        "1": "Zamknij"
-    }
+  "News": {
+    "1": "Nowości"
+  },
+  "Language": {
+    "1": "Język"
+  },
+  "COUNTRIES": {
+    "1": "KRAJE"
+  },
+  "Poland": {
+    "1": "Polska"
+  },
+  "United_Kingdom": {
+    "1": "Wielka Brytania"
+  },
+  "United_States": {
+    "1": "Stany Zjednoczone"
+  },
+  "More": {
+    "1": "Więcej"
+  },
+  "Source": {
+    "1": "Źródło: "
+  },
+  "Published_at": {
+    "1": "Opublikowano: "
+  },
+  "Time": {
+    "1": "Czas: "
+  },
+  "Visible_number_of_articles": {
+    "1": "Widoczna liczba artykułów: "
+  },
+  "Author": {
+    "1": "Autor: "
+  },
+  "No_content_to_display": {
+    "1": "Brak treści do wyświetlenia"
+  },
+  "Link_to_page": {
+    "1": "Link do strony"
+  },
+  "English": {
+    "1": "Angielski"
+  },
+  "Polish": {
+    "1": "Polski"
+  },
+  "Close": {
+    "1": "Zamknij"
+  }
 }

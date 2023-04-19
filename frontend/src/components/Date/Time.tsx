@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export const DateTime = () => {
   var [date, setDate] = useState(new Date());
